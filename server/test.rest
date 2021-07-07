@@ -1,0 +1,28 @@
+GET http://localhost:4200/recipes/
+
+################################
+
+POST http://localhost:4200/recipes/newRecipe
+Content-Type: application/json
+
+{
+	"name": "Plain Pork",
+	"servings": 2,
+	"cookTime": "1:00",
+	"instructions": "1. Eat Pork\n 2. Eat salt",
+	"ingredients": [
+		{
+			"name": "salt2112",
+			"amount": "2 tbs"
+		}
+	],
+	"authors": [
+		{
+			"name": "Daniel"
+		}
+	]
+}
+
+################################
+
+DELETE http://localhost:4200/recipes/60e5f9d8d52dda15a01849ee
