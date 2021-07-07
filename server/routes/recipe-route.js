@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
 		const recipes = await Recipe.find();
 		res.json(recipes);
 	} catch (err) {
-		res.json({ message: err });
+		res.json(err);
 	}
 });
 

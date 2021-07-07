@@ -3,9 +3,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 var cors = require('cors')
-require('dotenv/config');
+require('dotenv').config();
 const fs = require('fs');
-const PORT_CONNECTION = 4200;
 
 //Declare express as a variable
 const app = express();
@@ -30,8 +29,7 @@ app.use('/recipes', recipeRoute);
 
 //Main route
 app.get('/', (req, res) => {
-	res.status(200);
-	res.end();
+	res.send("Successfull")
 });
 
 
@@ -45,6 +43,6 @@ mongoose.connect(process.env.DB_CONNECTION, {
 });
 
 //Starting the server
-app.listen(PORT_CONNECTION, () => {
-	console.log("Listening on port " + PORT_CONNECTION);
+app.listen(process.env.PORT || 3000, () => {
+	console.log("Listening on port ");
 });

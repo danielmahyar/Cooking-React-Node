@@ -1,6 +1,10 @@
-GET http://localhost:4200/recipes/
+GET http://localhost:3000/recipes/
 
 ################################
+
+GET https://cooking-with-react.herokuapp.com/recipes
+
+###
 
 POST http://localhost:4200/recipes/newRecipe
 Content-Type: application/json
@@ -25,4 +29,4 @@ Content-Type: application/json
 
 ################################
 
-DELETE http://localhost:4200/recipes/60e5f9d8d52dda15a01849ee
+DELETE http://localhost:4200/recipes/60e612c9cbfd6d31fcd0bd00
